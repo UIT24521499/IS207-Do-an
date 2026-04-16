@@ -1,0 +1,208 @@
+<!doctype html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8" />
+  <title>Cửa hàng</title>
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+
+<body>
+
+<!-- HEADER -->
+<header>
+  <div class="header-container">
+    <div class="logo">
+      <img src="image/logo.png" alt="Logo" />
+    </div>
+
+    <nav>
+      <ul>
+        <li><a href="#">Trang chủ</a></li>
+        <li><a href="#">Bảo tàng số</a></li>
+        <li><a href="#" class="active">Cửa hàng</a></li>
+        <li><a href="#">Liên hệ</a></li>
+      </ul>
+    </nav>
+
+    <div class="header-right">
+      <input type="text" placeholder="Tìm kiếm sản phẩm..." />
+      <span>🛒</span>
+      <span>👤</span>
+    </div>
+  </div>
+</header>
+
+<!-- BANNER -->
+<section class="banner">
+  <img src="image/banner.jpg" alt="Banner" />
+</section>
+
+<!-- MAIN -->
+<main class="container">
+
+  <!-- SIDEBAR -->
+  <aside class="sidebar">
+    <div class="category">
+      <h3>Danh mục</h3>
+      <ul>
+        <li>Thủ công mỹ nghệ</li>
+        <li>Thời trang truyền thống</li>
+        <li>Quà lưu niệm</li>
+      </ul>
+    </div>
+
+    <div class="location">
+      <h3>Địa điểm</h3>
+      <ul>
+        <li onclick="scrollToSection('hoian')">Hội An</li>
+        <li onclick="scrollToSection('hue')">Huế</li>
+        <li onclick="scrollToSection('danang')">Đà Nẵng</li>
+        <li onclick="scrollToSection('sapa')">Sa Pa</li>
+      </ul>
+    </div>
+  </aside>
+
+  <!-- PRODUCTS -->
+  <section style="flex:1">
+
+    <!-- HỘI AN -->
+    <h2 id="hoian" class="section-title">Hội An</h2>
+    <div class="products">
+
+      <div class="product-card">
+        <img src="image/denlong.png">
+        <h4 class="product-name">Đèn lồng Hội An</h4>
+        <p class="product-desc">Đèn lồng thủ công truyền thống</p>
+        <p class="product-story">✨ Biểu tượng may mắn và lễ hội Hội An</p>
+        <p class="product-origin">📍 Hội An</p>
+        <span class="price">250.000đ</span>
+      </div>
+
+      <div class="product-card">
+        <img src="image/khanlua.png">
+        <h4 class="product-name">Khăn lụa Hội An</h4>
+        <p class="product-desc">Khăn lụa dệt thủ công</p>
+        <p class="product-story">✨ Nghề dệt lụa lâu đời</p>
+        <p class="product-origin">📍 Hội An</p>
+        <span class="price">320.000đ</span>
+      </div>
+
+      <div class="product-card">
+        <img src="image/thuyen.png">
+        <h4 class="product-name">Thuyền gỗ trang trí</h4>
+        <p class="product-desc">Mô hình thuyền buôn cổ</p>
+        <p class="product-story">✨ Gợi nhớ thương cảng xưa</p>
+        <p class="product-origin">📍 Hội An</p>
+        <span class="price">450.000đ</span>
+      </div>
+
+    </div>
+
+    <!-- HUẾ -->
+    <h2 id="hue" class="section-title">Huế</h2>
+    <div class="products">
+
+      <div class="product-card">
+        <img src="image/nonla.png">
+        <h4 class="product-name">Nón lá Huế</h4>
+        <p class="product-desc">Nón lá truyền thống</p>
+        <p class="product-story">✨ Biểu tượng dịu dàng Huế</p>
+        <p class="product-origin">📍 Huế</p>
+        <span class="price">180.000đ</span>
+      </div>
+
+      <div class="product-card">
+        <img src="image/botra.png">
+        <h4 class="product-name">Bộ trà cung đình</h4>
+        <p class="product-desc">Phong cách hoàng gia</p>
+        <p class="product-story">✨ Văn hóa trà cung đình</p>
+        <p class="product-origin">📍 Huế</p>
+        <span class="price">520.000đ</span>
+      </div>
+
+      <div class="product-card">
+        <img src="image/aodai.png">
+        <h4 class="product-name">Áo dài truyền thống</h4>
+        <p class="product-desc">Trang phục cung đình</p>
+        <p class="product-story">✨ Quốc phục Việt Nam</p>
+        <p class="product-origin">📍 Huế</p>
+        <span class="price">850.000đ</span>
+      </div>
+
+    </div>
+
+    <!-- ĐÀ NẴNG -->
+    <h2 id="danang" class="section-title">Đà Nẵng</h2>
+    <div class="products">
+
+      <div class="product-card">
+        <img src="image/caurong.png">
+        <h4 class="product-name">Mô hình Cầu Rồng</h4>
+        <p class="product-desc">Biểu tượng thành phố</p>
+        <p class="product-story">✨ Niềm tự hào Đà Nẵng</p>
+        <p class="product-origin">📍 Đà Nẵng</p>
+        <span class="price">300.000đ</span>
+      </div>
+
+      <div class="product-card">
+        <img src="image/tranhbien.png">
+        <h4 class="product-name">Tranh biển Mỹ Khê</h4>
+        <p class="product-desc">Tranh phong cảnh</p>
+        <p class="product-story">✨ Bãi biển đẹp nhất VN</p>
+        <p class="product-origin">📍 Đà Nẵng</p>
+        <span class="price">280.000đ</span>
+      </div>
+
+      <div class="product-card">
+        <img src="image/mockhoa.png">
+        <h4 class="product-name">Móc khóa Đà Nẵng</h4>
+        <p class="product-desc">Quà lưu niệm</p>
+        <p class="product-story">✨ Kỷ niệm du lịch</p>
+        <p class="product-origin">📍 Đà Nẵng</p>
+        <span class="price">90.000đ</span>
+      </div>
+
+    </div>
+
+    <!-- SA PA -->
+    <h2 id="sapa" class="section-title">Sa Pa</h2>
+    <div class="products">
+
+      <div class="product-card">
+        <img src="image/tuicam.png">
+        <h4 class="product-name">Túi thổ cẩm</h4>
+        <p class="product-desc">Thêu tay dân tộc</p>
+        <p class="product-story">✨ Nghệ thuật truyền thống</p>
+        <p class="product-origin">📍 Sa Pa</p>
+        <span class="price">350.000đ</span>
+      </div>
+
+      <div class="product-card">
+        <img src="image/vaithocam.png">
+        <h4 class="product-name">Vải thổ cẩm</h4>
+        <p class="product-desc">Vải dệt thủ công</p>
+        <p class="product-story">✨ Họa tiết tâm linh</p>
+        <p class="product-origin">📍 Sa Pa</p>
+        <span class="price">400.000đ</span>
+      </div>
+
+      <div class="product-card">
+        <img src="image/giotre.png">
+        <h4 class="product-name">Giỏ tre Sa Pa</h4>
+        <p class="product-desc">Đan tay truyền thống</p>
+        <p class="product-story">✨ Vật dụng vùng núi</p>
+        <p class="product-origin">📍 Sa Pa</p>
+        <span class="price">220.000đ</span>
+      </div>
+
+    </div>
+
+  </section>
+
+</main>
+
+<!-- JS -->
+<script src="js/main.js"></script>
+
+</body>
+</html>

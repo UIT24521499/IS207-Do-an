@@ -1,0 +1,105 @@
+<!doctype html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8" />
+    <title>Giỏ hàng</title>
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/cart.css" />
+</head>
+
+<body>
+
+<!-- HEADER -->
+<header>
+    <div class="header-container">
+        <div class="logo">
+            <img src="image/logo.png" />
+        </div>
+
+        <nav>
+            <ul>
+                <li><a href="index.html">Trang chủ</a></li>
+                <li><a href="#">Bảo tàng số</a></li>
+                <li><a href="index.html">Cửa hàng</a></li>
+                <li><a href="#" class="active">Giỏ hàng</a></li>
+            </ul>
+        </nav>
+    </div>
+</header>
+
+<!-- BANNER -->
+<section class="cart-banner">
+    <img src="image/banner.jpg" alt="Banner" />
+    <div class="banner-text">
+        <h2>Giỏ hàng của bạn</h2>
+        <p>Hoàn tất đơn hàng và mang văn hoá Việt về nhà ✨</p>
+    </div>
+</section>
+
+<main class="cart-container">
+
+  <!-- FILTER BAR -->
+  <div class="cart-filter">
+    <button>Danh mục ⌄</button>
+    <button>Địa điểm ⌄</button>
+    <button>Ưu đãi ⌄</button>
+  </div>
+
+  <div class="cart-content">
+
+    <!-- LEFT: PRODUCT LIST -->
+    <div class="cart-left">
+
+      <div class="cart-header">
+        <span>✔</span>
+        <span>Sản phẩm</span>
+        <span>Số lượng</span>
+        <span>Giá</span>
+        <span></span>
+      </div>
+
+      <div id="cart-items"></div>
+
+      <!-- COUPON -->
+      <div class="coupon-box">
+        <input type="text" placeholder="Nhập mã giảm giá">
+       <button onclick="applyCoupon()">Áp dụng</button>
+      </div>
+
+    </div>
+
+    <!-- RIGHT: SUMMARY -->
+    <div class="cart-right">
+
+      <div class="summary-box">
+        <h3>Đơn hàng</h3>
+
+        <div class="summary-line">
+          <span>Tạm tính</span>
+          <span id="subtotal">0đ</span>
+        </div>
+
+        <div class="summary-line">
+          <span>Phí ship</span>
+          <span id="shipping">30.000đ</span>
+        </div>
+
+        <div class="summary-line total">
+          <span>Tổng</span>
+          <span id="total">0đ</span>
+        </div>
+
+        <button class="checkout-btn">Thanh toán</button>
+      </div>
+
+    </div>
+
+  </div>
+
+</main>
+
+<!-- JS -->
+<script src="js/cart.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,63 @@
+<!doctype html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <title>Đăng ký</title>
+    <link rel="stylesheet" href="css/signup.css">
+</head>
+
+<body>
+
+<div class="signup-container">
+
+    <!-- LEFT -->
+    <div class="signup-left">
+        <h1>Join with us</h1>
+        <p>Tạo tài khoản để khám phá nhiều hơn 💚</p>
+    </div>
+
+    <!-- RIGHT -->
+    <div class="signup-right">
+
+        <div class="signup-box">
+
+            <div class="logo-box">
+                <img src="image/logo.png">
+            </div>
+
+            <h2>Đăng ký</h2>
+            <p class="sub-text">Bắt đầu hành trình của bạn ✨</p>
+
+            <form id="signup-form">
+
+                <input type="text" id="name" placeholder="Họ và tên">
+                <input type="email" id="email" placeholder="Email">
+                <input type="text" id="username" placeholder="Tên đăng nhập">
+
+                <div class="password-group">
+                    <input type="password" id="password" placeholder="Mật khẩu">
+                    <span onclick="togglePassword()">👁</span>
+                </div>
+
+                <div class="password-group">
+                    <input type="password" id="confirm" placeholder="Xác nhận mật khẩu">
+                </div>
+
+                <button type="submit">Đăng ký</button>
+
+            </form>
+
+            <p class="login-link">
+                Đã có tài khoản? <a href="login.html">Đăng nhập</a>
+            </p>
+
+        </div>
+
+    </div>
+
+</div>
+
+<script src="js/signup.js"></script>
+
+</body>
+</html>

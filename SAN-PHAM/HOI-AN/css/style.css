@@ -1,0 +1,252 @@
+/* 1. KHỞI TẠO CHUNG & BIẾN MÀU THƯƠNG HIỆU LACANI */
+:root {
+    --lacani-gold: #b5995e;    /* Màu vàng đồng từ Logo Lacani */
+    --lacani-teal: #2a5a54;    /* Màu xanh đậm từ họa tiết Banner */
+    --dark-text: #2c3e50;
+    --light-bg: #fdfbf7;      /* Màu nền giấy kem sang trọng */
+    --transition: all 0.3s ease;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    background-color: var(--light-bg);
+    color: var(--dark-text);
+    line-height: 1.6;
+}
+
+h1, h2, h3, h4, .navbar-brand {
+    font-family: 'Lora', serif;
+}
+
+/* 2. HEADER & NAVIGATION */
+header {
+    background: white;
+    border-bottom: 1px solid rgba(181, 153, 94, 0.2);
+}
+
+.nav-link-custom {
+    text-decoration: none;
+    color: var(--dark-text);
+    font-weight: 600;
+    text-transform: uppercase;
+    font-size: 0.85rem;
+    letter-spacing: 1px;
+    transition: var(--transition);
+}
+
+.nav-link-custom:hover {
+    color: var(--lacani-gold);
+}
+
+/* 3. HERO BANNER */
+.hero-banner {
+    height: 60vh;
+    background: url('../image/banner.jpg') no-repeat center center;
+    background-size: cover;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+.banner-overlay {
+    position: absolute;
+    top: 0; left: 0; width: 100%; height: 100%;
+    background: linear-gradient(to bottom, rgba(0,0,0,0.1), rgba(0,0,0,0.5));
+}
+
+.hero-content {
+    position: relative;
+    z-index: 2;
+}
+
+.btn-lacani {
+    background: var(--lacani-gold);
+    color: white;
+    border: none;
+    padding: 12px 35px;
+    font-weight: bold;
+    letter-spacing: 2px;
+    transition: var(--transition);
+}
+
+.btn-lacani:hover {
+    background: white;
+    color: var(--lacani-gold);
+    box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+}
+
+/* 4. GALLERY SẢN PHẨM CHÍNH (STYLE SHOPEE) */
+.main-image-wrapper {
+    position: relative;
+    border-radius: 15px;
+}
+
+.nav-btn {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: rgba(0,0,0,0.3);
+    color: white;
+    border: none;
+    padding: 15px 12px;
+    cursor: pointer;
+    z-index: 10;
+    transition: 0.3s;
+}
+
+.nav-btn:hover { background: var(--lacani-gold); }
+.prev { left: 10px; border-radius: 0 5px 5px 0; }
+.next { right: 10px; border-radius: 5px 0 0 5px; }
+
+.thumbnail-list img {
+    opacity: 0.6;
+    transition: 0.3s;
+    border: 2px solid transparent;
+    border-radius: 8px;
+}
+
+.thumbnail-list img.active {
+    border-color: var(--lacani-gold) !important;
+    opacity: 1;
+}
+
+/* 5. CHI TIẾT SẢN PHẨM */
+#productPrice {
+    color: var(--lacani-gold) !important;
+    font-size: 2.2rem;
+    font-weight: 700;
+}
+
+.btn-dark {
+    background-color: var(--lacani-gold) !important;
+    border: none;
+    border-radius: 0;
+    padding: 15px 30px;
+    font-weight: bold;
+}
+
+.btn-dark:hover {
+    filter: brightness(1.1);
+    transform: translateY(-2px);
+}
+
+/* 6. PHẦN ĐỊA ĐIỂM (LOCATION STORY) */
+#locationSection {
+    background: white;
+    padding: 40px;
+    border-radius: 20px;
+    border-left: 6px solid var(--lacani-gold);
+}
+
+.text-primary {
+    color: var(--lacani-teal) !important;
+}
+
+/* 7. CARD SẢN PHẨM LIÊN QUAN */
+.product-card {
+    transition: transform 0.3s ease;
+    border-radius: 12px;
+}
+
+.product-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 10px 25px rgba(0,0,0,0.08);
+}
+
+.product-card .price-tag {
+    color: var(--lacani-gold);
+    font-weight: bold;
+}
+
+/* 8. HIỆU ỨNG ANIMATION */
+.fade-in {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+}
+
+.fade-in.show {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Tùy chỉnh thanh cuộn màu Lacani */
+::-webkit-scrollbar-thumb {
+    background: var(--lacani-gold);
+    border-radius: 10px;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .hero-banner { height: 40vh; }
+    #productPrice { font-size: 1.6rem; }
+}
+/* 1. Logo to và rõ nét */
+.main-logo {
+    height: 70px; /* Tăng kích thước logo */
+    width: auto;
+    transition: var(--transition);
+}
+
+/* 2. Cấu trúc Hero Section mới */
+.hero-section {
+    position: relative;
+    padding: 100px 0;
+    overflow: hidden;
+    background-color: #fff; /* Nền trắng sạch sẽ */
+}
+
+.hero-background-container {
+    position: absolute;
+    top: 0;
+    right: -10%; /* Đẩy hình sang phải một chút để làm nền trang trí */
+    width: 60%;
+    height: 100%;
+    z-index: 1;
+    opacity: 0.8; /* Làm mờ nhẹ banner để không lấn át chữ */
+}
+
+.hero-bg-img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain; /* Giữ nguyên khung hình banner */
+}
+
+.hero-overlay {
+    position: absolute;
+    top: 0; left: 0; width: 100%; height: 100%;
+    /* Hiệu ứng mờ dần để hòa quyện banner vào nền trắng */
+    background: linear-gradient(to right, #fff 10%, transparent 100%);
+}
+
+.hero-content {
+    position: relative;
+    z-index: 2; /* Đảm bảo chữ nằm trên banner */
+    text-align: left; /* Chuyển sang căn lề trái cho hiện đại */
+}
+
+.hero-content h1 {
+    color: var(--lacani-gold);
+    max-width: 600px;
+}
+
+/* 3. Tinh chỉnh Nav Link */
+.nav-link-custom {
+    color: var(--dark-text) !important;
+    font-size: 0.95rem;
+    letter-spacing: 1.5px;
+}
+
+.badge-cart {
+    position: absolute;
+    top: -5px;
+    right: -10px;
+    background: var(--lacani-gold);
+    color: white;
+    padding: 2px 6px;
+    border-radius: 50%;
+    font-size: 0.7rem;
+}

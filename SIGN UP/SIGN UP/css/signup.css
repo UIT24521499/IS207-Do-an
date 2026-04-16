@@ -1,0 +1,134 @@
+:root {
+    --primary: #12372A;
+    --secondary: #436850;
+    --accent: #ADBC9F;
+    --light: #FBFADA;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Lora', serif;
+}
+
+/* LAYOUT */
+.signup-container {
+    display: flex;
+    min-height: 100vh;
+}
+
+/* LEFT */
+.signup-left {
+    flex: 1;
+    background: linear-gradient(135deg, #12372A, #436850);
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 60px;
+}
+
+.signup-left h1 {
+    font-size: 40px;
+}
+
+.signup-left p {
+    margin-top: 10px;
+}
+
+/* RIGHT */
+.signup-right {
+    flex: 1;
+    background: var(--light);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* BOX */
+.signup-box {
+    background: white;
+    padding: 35px;
+    width: 380px;
+    border-radius: 20px;
+    box-shadow: 0 15px 40px rgba(0,0,0,0.1);
+    text-align: center;
+}
+
+/* LOGO */
+.logo-box img {
+    width: 110px;
+    margin-bottom: 10px;
+}
+
+/* TEXT */
+.sub-text {
+    margin-bottom: 20px;
+    color: gray;
+}
+
+/* INPUT */
+.signup-box input {
+    width: 100%;
+    padding: 12px;
+    margin-bottom: 12px;
+    border-radius: 10px;
+    border: 1px solid #ccc;
+}
+
+.signup-box input:focus {
+    border-color: var(--secondary);
+}
+
+/* PASSWORD */
+.password-group {
+    position: relative;
+}
+
+.password-group span {
+    position: absolute;
+    right: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    cursor: pointer;
+}
+
+/* BUTTON */
+.signup-box button {
+    width: 100%;
+    padding: 12px;
+    background: var(--primary);
+    color: white;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+.signup-box button:hover {
+    background: var(--secondary);
+}
+
+/* LINK */
+.login-link {
+    margin-top: 15px;
+}
+
+.login-link a {
+    color: var(--secondary);
+    text-decoration: none;
+}
+
+/* RESPONSIVE */
+@media(max-width:900px){
+    .signup-container {
+        flex-direction: column;
+    }
+
+    .signup-left {
+        display: none;
+    }
+}
