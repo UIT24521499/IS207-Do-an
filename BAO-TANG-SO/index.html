@@ -1,0 +1,210 @@
+<!doctype html>
+<html lang="vi">
+<head>
+
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Trang bảo tàng số</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+  <link rel="stylesheet" href="css/style.css" />
+
+</head>
+
+
+<body class="museum-page">
+  <header>
+  <div class="header-container">
+    <div class="logo">
+        <a href="/">
+            <img src="img/logo web.jpg" alt="Logo Cửa Hàng" />
+        </a>
+    </div>
+
+    <nav>
+      <ul>
+        <li><a href="#">Trang chủ</a></li>
+        <li><a href="#"class="active">Bảo tàng số</a></li>
+        <li><a href="#">Cửa hàng</a></li>
+        <li><a href="#">Tìm hiểu</a></li>
+      </ul>
+    </nav>
+
+    <div class="header-right">
+      <div class="search-bar">
+        <input type="text" placeholder="Tìm kiếm..." />
+        <span class="search-icon">🔍</span>
+      </div>
+      <span class="icon">🛒</span>
+      <span class="icon">👤</span>
+    </div>
+  </div>
+</header>
+
+
+    <main class="container museum-content">
+        <!-- 1. Bản đồ & Hướng dẫn -->
+        <section class="map-section">
+        <div class="map-wrapper">
+            <!-- Ảnh bản đồ -->
+            <img src="img/bản đồ.jpg" alt="Bản đồ Việt Nam" class="main-map">
+            
+            <!-- 1. Sapa -->
+            <div class="map-marker" style="top: 12%; left: 28%;" onclick="showLocation('sapa')">
+                <i class="fas fa-map-marker-alt"></i>
+                <span class="marker-label">Sapa</span>
+            </div>
+
+            <!-- 2. Huế -->
+            <div class="map-marker" style="top: 42%; left: 48%;" onclick="showLocation('hue')">
+                <i class="fas fa-map-marker-alt"></i>
+                <span class="marker-label">Huế</span>
+            </div>
+
+            <!-- 3. Đà Nẵng -->
+            <div class="map-marker" style="top: 45%; left: 52%;" onclick="showLocation('da-nang')">
+                <i class="fas fa-map-marker-alt"></i>
+                <span class="marker-label">Đà Nẵng</span>
+            </div>
+
+            <!-- 4. Hội An -->
+            <div class="map-marker" style="top: 48%; left: 55%;" onclick="showLocation('hoi-an')">
+                <i class="fas fa-map-marker-alt"></i>
+                <span class="marker-label">Hội An</span>
+            </div>
+        </div>
+
+        <div class="map-instruction">
+            <h2>Click vào điểm trên <br> bản đồ để khám phá!</h2>
+        </div>
+    </section>
+
+        <!-- 2. Khối thông tin địa danh (Sẽ đổ data từ DB) -->
+        <section class="location-detail-grid">
+            <!-- Cột trái: Hình ảnh -->
+            <div class="location-gallery-box">
+                <h2 id="db-location-name">Tên địa danh...</h2>
+                <div class="main-img-placeholder"></div>
+                <div class="thumb-list">
+                    <div class="thumb"></div>
+                    <div class="thumb"></div>
+                    <div class="thumb"></div>
+                    <div class="thumb"></div>
+                </div>
+            </div>
+
+            <!-- Cột phải: Văn bản -->
+            <div class="location-info-box">
+                <h3>Thông tin chi tiết</h3>
+                <div class="info-content">
+                    <h4 id="db-full-title">Tiêu đề di sản...</h4>
+                    <strong>Mô tả</strong>
+                    <p id="db-description">Nội dung mô tả sẽ hiển thị ở đây...</p>
+                    <strong>Lịch sử</strong>
+                    <p id="db-history">Nội dung lịch sử sẽ hiển thị ở đây...</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- 3. Gợi ý sản phẩm (Tương tự cấu trúc trang chủ) -->
+        <section class="suggested-products-box">
+        <h3>Gợi ý sản phẩm</h3>
+        
+        <div id="product-container" class="product-list-vertical">
+            <!-- ITEM MINH HỌA - Sau này sẽ render từ Database -->
+          
+            <!-- Sản phẩm 1 --> 
+            <div class="product-item-horizontal">
+                <div class="prod-img">
+                    <img src="placeholder-image.jpg" id="prod-img-url" alt="Tên sản phẩm">
+                </div>
+                <div class="prod-info">
+                    <h4 id="prod-name">Tiêu đề sản phẩm minh họa</h4>
+                    <p id="product-desc">Mô tả ngắn gọn về sản phẩm sẽ hiển thị tại đây. Đây là nội dung giả định để kiểm tra độ dài văn bản.</p>
+                    <div class="prod-meta">
+                        <span class="rating" id="prod-rating">4.9 ⭐</span>
+                        <div class="tags" id="prod-tags">
+                            <span class="tag">Tag 1</span>
+                            <span class="tag">Tag 2</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+             <!-- Sản phẩm 2 --> 
+            <div class="product-item-horizontal">
+                <div class="prod-img">
+                    <img src="placeholder-image.jpg" id="prod-img-url" alt="Tên sản phẩm">
+                </div>
+                <div class="prod-info">
+                    <h4 id="prod-name">Tiêu đề sản phẩm minh họa</h4>
+                    <p id="product-desc">Mô tả ngắn gọn về sản phẩm sẽ hiển thị tại đây. Đây là nội dung giả định để kiểm tra độ dài văn bản.</p>
+                    <div class="prod-meta">
+                        <span class="rating" id="prod-rating">4.9 ⭐</span>
+                        <div class="tags" id="prod-tags">
+                            <span class="tag">Tag 1</span>
+                            <span class="tag">Tag 2</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Sản phẩm 3 --> 
+            <div class="product-item-horizontal">
+                <div class="prod-img">
+                    <img src="placeholder-image.jpg" id="prod-img-url" alt="Tên sản phẩm">
+                </div>
+                <div class="prod-info">
+                    <h4 id="prod-name">Tiêu đề sản phẩm minh họa</h4>
+                    <p id="product-desc">Mô tả ngắn gọn về sản phẩm sẽ hiển thị tại đây. Đây là nội dung giả định để kiểm tra độ dài văn bản.</p>
+                    <div class="prod-meta">
+                        <span class="rating" id="prod-rating">4.9 ⭐</span>
+                        <div class="tags" id="prod-tags">
+                            <span class="tag">Tag 1</span>
+                            <span class="tag">Tag 2</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="view-more-container">
+            <button class="btn-outline">Xem thêm</button>
+        </div>
+        </section>
+    </main>
+
+<footer class="footer">
+  <div class="footer-container">
+    <div class="footer-left">
+      <h3>Liên hệ</h3>
+
+      <div class="contact-item">
+        <i class="far fa-envelope contact-icon"></i>
+        <a href="mailto:Lacani@gmail.com" class="footer-link">Lacani@gmail.com</a>
+      </div>
+
+      <div class="contact-item">
+        <i class="fas fa-phone-alt contact-icon"></i>
+        <a href="tel:0865206285" class="footer-link">(+84) 865 206 285</a>
+      </div>
+    </div>
+
+    <div class="footer-right">
+      <div class="social-icons">
+        <a href="#" class="social-link"><i class="fab fa-facebook-f"></i></a>
+        <a href="#" class="social-link"><i class="fab fa-instagram"></i></a>
+        <a href="#" class="social-link"><i class="fab fa-tiktok"></i></a>
+        <a href="#" class="social-link"><i class="fab fa-linkedin-in"></i></a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<script src="js/main.js"></script>
+
+</body>
+</html>
